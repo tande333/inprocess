@@ -1,0 +1,18 @@
+#resourceLeavePage{min-width:0;max-width:100%}#resourceLeavePage table{width:100%}#resourceLeavePage td{text-align:center}#resourceLeavePage .leave-reason-text{text-align:left;max-width:280px;overflow-wrap:anywhere}#leaveEditDialog button{min-height:44px}.leave-error{white-space:pre-wrap;background:#fff2ef;color:#a33126;border:1px solid #e2b1a9;padding:12px;border-radius:6px;margin:10px 0}.leave-error[hidden]{display:none}.leave-toolbar{flex-wrap:wrap}
+#leaveEditDialog{width:min(640px,calc(100vw - 40px));padding:0;border:0;color:var(--text);max-height:calc(100dvh - 128px)}
+#leaveEditDialog:not([open]){display:none}
+#leaveEditDialog::backdrop{background:rgba(17,24,39,.36)}
+#leaveEditDialog form{display:flex;flex-direction:column;min-height:0;max-height:inherit;margin:0;flex:1}
+#leaveEditDialog header{position:static;flex-shrink:0}
+#leaveEditDialog .modal-body{min-height:0}
+#leaveEditDialog .modal-close{min-width:44px;width:44px;height:44px;background:transparent;border:0;padding:0;font-size:24px}
+#leaveEditDialog .form-section{margin-bottom:0}
+#leaveEditDialog .form-label em{color:var(--danger-text,#c53d38);font-style:normal;margin-left:4px}
+#leaveEditDialog [hidden]{display:none!important}
+#leaveEditDialog .form-cell{min-width:0}
+#leaveEditDialog input,#leaveEditDialog select,#leaveEditDialog textarea{box-sizing:border-box;min-width:0;max-width:100%}
+#leaveEditDialog input[type=date]{appearance:none;-webkit-appearance:none}
+#leaveEditDialog input::-webkit-date-and-time-value{min-width:0;text-align:left}
+#leaveEditDialog .leave-dialog-actions{flex-shrink:0}
+.mobile-person-options button:disabled{opacity:.55;cursor:not-allowed}
+@media(max-width:1100px){#resourceLeavePage .table-scroll{overflow:visible}#resourceLeavePage .leave-reason-text{max-width:none}#resourceLeavePage .filter-box{min-width:0}#resourceLeavePage input[type=date]{width:0;flex:1;min-width:0;appearance:none;-webkit-appearance:none}#leaveEditDialog form{height:100%;max-height:100dvh}#leaveEditDialog .form-cell input,#leaveEditDialog .form-cell select,#leaveEditDialog .form-cell textarea{font-size:16px}#leaveEditDialog header{padding-left:12px;padding-right:12px}}

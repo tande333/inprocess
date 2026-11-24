@@ -1,0 +1,78 @@
+#personnelReportPage{min-width:0;max-width:100%;padding-bottom:24px;--nr-fixed:300px}#personnelReportPage button{min-height:44px;cursor:pointer}.nr-note{font-size:13px;line-height:1.8;color:#607a72;margin:16px 0;overflow-wrap:anywhere}.nr-scroll{max-width:100%;overflow:auto;border:1px solid #c9dfd7;border-radius:6px;background:white;cursor:grab;overscroll-behavior-x:contain}.nr-chart{width:calc(var(--nr-fixed) + var(--nr-time));min-width:100%}.nr-chart-head,.nr-person{display:flex;position:relative}.nr-chart-head{background:#dfefe9;min-height:54px}.nr-fixed{position:sticky;left:0;z-index:2;width:var(--nr-fixed);flex-shrink:0;display:grid;grid-template-columns:44px 1fr 1fr;align-items:center;background:#f2f8f6;border-right:1px solid #bed8cf;box-sizing:border-box;box-shadow:3px 0 5px #264c4010}.nr-fixed span{padding:10px 6px;overflow-wrap:anywhere;text-align:center;font-size:13px;min-width:0}.nr-chart-head .nr-fixed{background:#dfefe9;font-weight:600}.nr-axis{position:relative;flex:1;min-width:0}.nr-tick{position:absolute;top:18px;padding-left:8px;font-size:12px;color:#42665b;white-space:nowrap}.nr-person{border-top:1px solid #dceae4}.nr-timeline{position:relative;flex:1;min-width:0;padding:6px 0}.nr-grid{position:absolute;inset:0;pointer-events:none}.nr-grid i{position:absolute;top:0;bottom:0;border-left:1px solid #e5efea}.nr-lane{position:relative;height:46px}.nr-bar{position:absolute;top:1px;border:0!important;border-radius:4px;padding:0!important;background:transparent!important;min-width:8px;height:44px;text-align:left;color:#fff!important;z-index:1}.nr-bar:before{content:'';position:absolute;inset:8px 0;background:var(--nr-color);border-radius:4px}.nr-bar span{position:relative;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 6px;font-size:12px;line-height:28px}.nr-bar:focus-visible{outline:2px solid #172e4d;outline-offset:1px}.nr-undated{position:sticky;left:calc(var(--nr-fixed) + 8px);max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#fff5df!important;color:#856019!important;font-size:12px}.nr-issue,.nr-empty-person{position:sticky;left:calc(var(--nr-fixed) + 8px);width:240px;max-width:calc(100vw - var(--nr-fixed) - 48px);min-height:44px;padding:10px;box-sizing:border-box;color:#856019;font-size:12px;overflow-wrap:anywhere}.nr-selection{margin-top:12px;border:1px solid #bed8cf;border-radius:6px;padding:14px;background:white;overflow-wrap:anywhere;font-size:14px;line-height:1.8}.nr-selection[hidden]{display:none}
+@media(max-width:767px){#personnelReportPage{--nr-fixed:160px}.nr-fixed{grid-template-columns:32px 56px 72px}.nr-fixed span{font-size:12px;padding:8px 3px}.nr-note{font-size:12px}.nr-undated{max-width:145px}}
+
+.nr-gantt{position:relative;min-width:0;border:1px solid #c9dfd7;border-radius:6px}.nr-gantt .nr-scroll{border:0;border-radius:0;scrollbar-width:none}.nr-gantt .nr-scroll::-webkit-scrollbar{display:none}.nr-sticky{position:sticky;top:var(--nr-sticky-top,64px);z-index:12;background:#dfefe9;box-shadow:0 2px 4px #264c4020}.nr-top-scroll{margin-left:var(--nr-fixed);overflow-x:scroll;overflow-y:hidden;min-height:18px;scrollbar-color:#7b9e94 #e3eeea}.nr-top-scroll>div{height:1px}.nr-head-scroll{overflow:hidden;min-width:0}.nr-head-scroll .nr-fixed{z-index:3}.nr-gantt .nr-chart-head{border-bottom:1px solid #bed8cf}
+.nr-gantt .nr-bar,.nr-gantt .nr-undated{scroll-margin-top:calc(var(--nr-sticky-top,64px) + 80px)}
+
+#personnelReportPage .nr-selection{position:fixed;z-index:95;margin:0;box-sizing:border-box;overflow:auto;box-shadow:0 5px 22px #23473c30;background:var(--surface,#fff);border-color:var(--line-strong,#bed8cf);color:var(--text,#263c35);font-size:14px;line-height:1.7;overscroll-behavior:contain}
+
+#personnelReportPage .nr-toolbar{flex-wrap:wrap}#personnelReportPage .nr-toolbar>.filter-box{width:220px;font-weight:400}#personnelReportPage .nr-toolbar>.filter-box>span{font-weight:400}#personnelReportPage .nr-toolbar>.multi-select{width:240px}#personnelReportPage .nr-toolbar button{min-height:0}#personnelReportPage .nr-toolbar .multi-select-panel{max-height:320px;overflow-y:auto;z-index:30}#personnelReportPage .nr-toolbar input[type=checkbox]{min-height:0;max-width:none}#personnelReportPage .nr-toolbar .filter-box input{font:inherit}
+@media(max-width:1100px){#personnelReportPage .nr-toolbar button{min-height:44px}#personnelReportPage .nr-toolbar .multi-select-panel{max-height:45dvh}#personnelReportPage .nr-toolbar .multi-select-panel label{min-height:44px}#personnelReportPage .nr-toolbar input[type=checkbox]{width:20px;height:20px;flex-basis:20px}}
+
+#personnelReportPage .nr-toolbar>.filter-box{grid-template-columns:max-content minmax(0,1fr);min-width:0}#personnelReportPage .nr-toolbar>.filter-box>input{width:100%;min-width:0;max-width:100%;box-sizing:border-box}#personnelReportPage .nr-toolbar>.filter-box>input:focus{outline-offset:-2px}
+/* Keep native iOS date content inside the filter's rounded border. */
+@media(max-width:1100px){
+ #personnelReportPage .nr-toolbar .nr-date-filter{overflow:hidden;grid-template-columns:max-content minmax(0,1fr);gap:0}
+ #personnelReportPage .nr-date-filter>input[type=date]{-webkit-appearance:none;appearance:none;display:block;box-sizing:border-box;min-width:0!important;width:100%;max-width:100%;margin:0;padding:8px 10px;background:transparent;border:0;border-radius:0;min-height:44px;text-align:left}
+ #personnelReportPage .nr-date-filter>input[type=date]::-webkit-date-and-time-value{min-width:0;text-align:left}
+ #personnelReportPage .nr-date-filter>input[type=date]::-webkit-datetime-edit{min-width:0;padding:0}
+}
+
+
+@media(max-width:1100px){
+ #personnelReportPage .nr-toolbar>.filter-box,#personnelReportPage .nr-toolbar>#nrRoleMulti{grid-template-columns:88px minmax(0,1fr);gap:0;align-items:stretch}
+ #personnelReportPage .nr-toolbar>.filter-box{overflow:hidden}
+ #personnelReportPage .nr-toolbar>.filter-box>span,#personnelReportPage #nrRoleMulti>.stage-label{display:flex;align-items:center;justify-content:center;align-self:stretch;height:auto;min-height:44px;padding:0 10px;background:transparent}
+ #personnelReportPage #nrSearch{-webkit-appearance:none;appearance:none;display:block;margin:0;padding:8px 10px;border:0;border-radius:0;box-shadow:none;background:transparent;min-height:44px}
+ #personnelReportPage #nrRoleMulti>.multi-select-button{height:auto;min-height:44px;margin:0;background:transparent;border-radius:0 4px 4px 0}
+}
+#personnelReportPage .nr-bar{min-width:0}
+
+#personnelReportPage{--nr-fixed:380px}
+#personnelReportPage .nr-fixed{grid-template-columns:44px 1fr 1fr 80px}
+#personnelReportPage .nr-utilization{width:100%;min-width:0;min-height:44px;padding:8px 2px;border:0;background:transparent;color:var(--text,#263c35);font-size:13px;font-weight:600;white-space:nowrap}
+@media(max-width:767px){#personnelReportPage{--nr-fixed:224px}#personnelReportPage .nr-fixed{grid-template-columns:28px 50px 62px 84px}#personnelReportPage .nr-fixed>span{padding:8px 2px;font-size:12px}#personnelReportPage .nr-utilization{font-size:12px}}
+#personnelReportPage .nr-selection{white-space:pre-line}
+
+/* Phone/tablet accordion view; desktop table rules above remain unchanged. */
+@media(max-width:1100px){
+ #personnelReportPage .nr-mobile-filters[hidden],#personnelReportPage .nr-mobile-filters>.mobile-filter-toggle[hidden],#personnelReportPage .nr-card-body[hidden]{display:none!important}
+ #personnelReportPage .nr-mobile-query{display:flex;gap:8px;margin:0 0 12px;min-width:0}
+ #personnelReportPage .nr-mobile-query button{background:var(--surface,#fff);border:1px solid var(--line,#c7ded7);border-radius:7px;color:var(--text,#244b43);padding:8px;min-height:44px}
+ #personnelReportPage .nr-mobile-query button:first-child{flex:1;min-width:0;font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
+ #personnelReportPage .nr-mobile-query button:last-child{flex:0 0 52px;font-size:14px}
+ #personnelReportPage .nr-mobile-gantt{min-width:0;max-width:100%;padding-bottom:8px}
+ #personnelReportPage .nr-mobile-date-strip{position:sticky;top:var(--nr-mobile-top,64px);z-index:12;padding:0 12px 6px;background:var(--bg,#edf5f2);border-bottom:1px solid var(--line,#c7ded7);margin-bottom:12px}
+ #personnelReportPage .nr-mobile-date-title{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--text,#244b43)}
+ #personnelReportPage .nr-mobile-date-title strong{font-size:14px;text-align:center}
+ #personnelReportPage .nr-mobile-date-title button{flex:0 0 44px;height:44px;min-width:44px;border:0;background:transparent;font-size:24px;padding:0;color:inherit}
+ #personnelReportPage .nr-mobile-axis-scroll,#personnelReportPage .nr-card-scroll{overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;max-width:100%;min-width:0;scrollbar-width:thin;scrollbar-color:#a3c7bf transparent}
+ #personnelReportPage .nr-mobile-axis-scroll>.nr-card-axis,#personnelReportPage .nr-card-track{width:100%;min-width:var(--nr-mobile-time);position:relative}
+ #personnelReportPage .nr-card-axis{height:28px;position:relative;border-bottom:1px solid #e3eeea}
+ #personnelReportPage .nr-mobile-tick{position:absolute;top:5px;transform:translateX(-50%);font-size:11px;color:var(--muted,#617a75);white-space:nowrap;line-height:18px}
+ #personnelReportPage .nr-mobile-tick.first{transform:none}
+ #personnelReportPage .nr-mobile-tick.last{transform:translateX(-100%)}
+ #personnelReportPage .nr-person-cards{display:grid;gap:10px}
+ #personnelReportPage .nr-person-card{min-width:0;border:1px solid var(--line,#c7ded7);border-radius:12px;background:var(--surface,#fff)}
+ #personnelReportPage .nr-card-heading{display:flex;align-items:center;padding:8px 10px;gap:6px;min-width:0}
+ #personnelReportPage .nr-person-toggle{flex:1;min-width:0;display:grid;grid-template-columns:minmax(0,1fr) 20px;grid-template-rows:auto auto auto;gap:3px 6px;padding:6px 0;border:0;background:transparent;color:var(--text,#244b43);text-align:left}
+ #personnelReportPage .nr-person-name{font-size:16px;font-weight:650;grid-column:1;grid-row:1;overflow-wrap:anywhere}
+ #personnelReportPage .nr-person-role{font-size:12px;grid-column:1;grid-row:2;width:fit-content;max-width:100%;padding:1px 6px;border-radius:4px;background:#e6f3f5;color:#396777;overflow-wrap:anywhere}
+ #personnelReportPage .nr-person-toggle small{font-size:12px;color:var(--muted,#617a75);grid-column:1;grid-row:3}
+ #personnelReportPage .nr-card-chevron{grid-column:2;grid-row:1 / 4;align-self:center;font-size:22px;text-align:center}
+ #personnelReportPage .nr-card-util{flex:0 0 80px;text-align:center;align-self:center}
+ #personnelReportPage .nr-card-util .nr-utilization{font-size:18px;line-height:24px;min-height:44px;color:#168479;padding:6px 0}
+ #personnelReportPage .nr-card-util small{display:block;font-size:11px;line-height:14px;color:var(--muted,#617a75);margin-top:-5px;pointer-events:none}
+ #personnelReportPage .nr-card-body{border-top:1px solid var(--line,#dceae4);padding:0 12px 8px;min-width:0}
+ #personnelReportPage .nr-card-project{min-width:0;margin:8px 0 12px}
+ #personnelReportPage .nr-card-project-name{display:flex;align-items:center;gap:8px;min-width:0}
+ #personnelReportPage .nr-card-project-name button{flex:1;min-width:0;padding:6px 0;border:0;background:transparent;color:var(--text,#244b43);text-align:left;font-size:13px;line-height:20px;overflow-wrap:anywhere}
+ #personnelReportPage .nr-card-project-name>span{flex-shrink:0;font-size:12px;color:var(--muted,#617a75)}
+ #personnelReportPage .nr-card-grid{position:absolute;top:28px;bottom:0;left:0;right:0;pointer-events:none}
+ #personnelReportPage .nr-card-grid i{position:absolute;top:0;bottom:0;border-left:1px solid #e3eeea}
+ #personnelReportPage .nr-card-track .nr-bar span{display:none}
+ #personnelReportPage .nr-card-track .nr-bar:before{inset:14px 0;border-radius:3px}
+ #personnelReportPage .nr-card-track .nr-undated{position:static;max-width:100%;width:100%;white-space:normal;text-align:left;border:0;background:#fff5df;padding:8px;font-size:12px}
+ #personnelReportPage .nr-card-hint{font-size:11px;color:var(--muted,#617a75);text-align:center;line-height:18px;margin:6px 0 0}
+ #personnelReportPage .nr-card-message{font-size:13px;color:var(--muted,#617a75);line-height:1.6;margin:14px 0}
+}
